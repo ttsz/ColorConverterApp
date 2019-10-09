@@ -8,6 +8,10 @@ Indításhoz az ```npm start``` parancsot kell kiadni.
 
 Az alkalmazás a 3000 -es porton indul el.
 
+DEBUG Log üzenetek a konzol kimeneten elérhetőek.
+
+ERROR, ACCESS és Application logok a log könyvtárból érhetőek el.
+
 ## Funkciók
 
 Az alkalmazás elindítása után a http://locahost:3000 webcímen elérhető a program kezdő oldala. 
