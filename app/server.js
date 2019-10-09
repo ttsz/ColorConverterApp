@@ -12,6 +12,9 @@ var log = log4js.getLogger("app");
 let port = process.env.PORT;
 
 app.use(log4js.connectLogger(log4js.getLogger("http"), { level: 'auto' }));
+app.set('views', __dirname + '/html');
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
 app.get("/rgbToHex", function(req, res) {
   let red   = parseInt(req.query.red, 10);
@@ -32,7 +35,8 @@ app.get("/hexToRgb", function(req, res) {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/html/index.html')
+  //res.sendFile(__dirname + '/html/index.html')
+  res.render(__dirname + "/html/index.html", {port:port});
 })
 
 app.listen(port);
