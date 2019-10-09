@@ -1,3 +1,4 @@
+require('dotenv').config()
 var log4js = require('log4js');
 log4js.configure('app/config/log4js.json');
 var express = require("express");
@@ -7,6 +8,8 @@ var express = require("express");
 var app = express();
 var converter = require("./converter");
 var log = log4js.getLogger("app");
+
+let port = process.env.PORT;
 
 app.use(log4js.connectLogger(log4js.getLogger("http"), { level: 'auto' }));
 
@@ -32,5 +35,5 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/html/index.html')
 })
 
-app.listen(3000);
-log.info('Express server listening on port 3000');
+app.listen(port);
+log.info(`Express server listening on port ${port}`);
