@@ -67,3 +67,4 @@ typings/
 package-lock.json
 
 .history
+log
