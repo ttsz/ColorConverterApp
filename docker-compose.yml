@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  colorconverter:
+    image: colorconverter:version-1.0
+    build: .
+    ports:
+      - 3000:3000
