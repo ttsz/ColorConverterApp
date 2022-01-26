@@ -5,19 +5,23 @@
 <title>Color Converter app</title>
 </head>
 <body>
-<h1 id="colorconverter-application">ColorConverter Application</h1>
-<h2 id="indítási-útmutató">Indítási útmutató</h2>
-<p>Az alkalmazás indításához nodejs szerver környezet szükséges.</p>
-<p>Az alkalmazás az app könyvtárban található a server.js fájl indítja el. Indításhoz az <code>npm start</code> parancsot kell kiadni.</p>
-<p>Az alkalmazás a 3000 -es porton indul el.</p>
-<h2 id="funkciók">Funkciók</h2>
-<p>Az alkalmazás elindítása után a http://locahost:3000 webcímen elérhető a program kezdő oldala.</p>
-<p>További funkciók a következő 2 endpointon keresztül érhetőek el:</p>
-<h3 id="hex-színkód-konvertálása-rgb-színkóddá">HEX színkód konvertálása RGB színkóddá</h3>
-<p>hex #00ff00 konvertálása rgb színkóddá</p>
-<p>pl.: http://localhost:3000/hexToRgb?hex=00ff00</p>
-<h3 id="rgb-színkód-konvertálása-hex-színkóddá">RGB színkód konvertálása HEX színkóddá</h3>
-<p>red=255 green=255 blue=255</p>
-<p>pl.: http://localhost:3000/rgbToHex?red=255&amp;green=255&amp;blue=255</p>
+    <h1 id="colorconverter-application">ColorConverter Application</h1>
+    <h2 id="indítási-útmutató">Indítási útmutató</h2>
+    <p>Indított alkalmazás portszáma: <%= port %></p>
+    <p>Az alkalmazás indításához nodejs szerver környezet szükséges.</p>
+    <p>Az alkalmazás az app könyvtárban található a server.js fájl indítja el. Indításhoz az <code>npm start</code> parancsot kell kiadni.</p>
+    <p>Az alkalmazás a <%= port %> -es porton indul el.</p>
+    <p>DEBUG Log üzenetek a konzol kimeneten elérhetőek.</p>
+    <p>ERROR, ACCESS és Application logok a log könyvtárból érhetőek el.</p>
+    <h2 id="funkciók">Funkciók</h2>
+    <p>Az alkalmazás elindítása után a http://locahost:<%= port %> webcímen elérhető a program kezdő oldala.</p>
+    <p>További funkciók a következő 2 endpointon keresztül érhetőek el:</p>
+    <h3 id="hex-színkód-konvertálása-rgb-színkóddá">HEX színkód konvertálása RGB színkóddá</h3>
+    <p>hex #00ff00 konvertálása rgb színkóddá</p>
+    <p>pl.: http://localhost:<%= port %>/hexToRgb?hex=00ff00</p>
+    <h3 id="rgb-színkód-konvertálása-hex-színkóddá">RGB színkód konvertálása HEX színkóddá</h3>
+    <p>red=255 green=255 blue=255</p>
+    <p>pl.: http://localhost:<%= port %>/rgbToHex?red=255&amp;green=255&amp;blue=255</p>
+    
 </body>
 </html>
